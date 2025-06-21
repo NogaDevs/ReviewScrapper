@@ -7,7 +7,7 @@ dt_now = dt.datetime.now().strftime("%Y-%m-%d")
 class ReviewSpider(scrapy.Spider):
     name = "ikyuspider"
 
-    async def start(self):
+    async def start(self): # CHANGE HOTEL ID AND PAGE RANGE BEFORE USING.
         urls = [f"https://www.ikyu.com/<HOTELID>/review/p{page + 1}/" for page in range(<PAGE RANGE>)]
 
         for url in urls:
